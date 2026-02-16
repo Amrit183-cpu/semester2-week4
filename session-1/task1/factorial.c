@@ -6,10 +6,14 @@
  #include <stdio.h>
 
  int main( void ) {
-    int f[20]; /* this is the array*/
-    for ( int k=0; k<20; ++k) {
+    int f[20];
+    for ( int k=0; k<20; ++k) { 
       f[0] = 1;
-      f[k] = 
+      //how to implement the factorial?
+      for (int j=0; j<k; ++j) {
+        f[k] = f[k] * f[j];
+      }
+      printf("%d ", f[k]);
     }
 
     /*

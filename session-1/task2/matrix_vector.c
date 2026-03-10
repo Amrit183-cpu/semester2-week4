@@ -10,11 +10,18 @@
     float b[4];
     float c[4];
 
-    /*
-    Intialise the matrix a and vector b entries to 1. 
-    Write code to compute the product.
-    Store your answer in vector c
-    Print your final answer
-    */
+    for (int k=0; k<4; ++k){
+      b[k] = k+1;
+    }
+
+    for (int i=0; i<4; ++i){
+      c[i] = 0;
+      for (int j=0; j<4; ++j){
+         a[i][j] = i+1;
+         c[i] = c[i] + (a[i][j] * b[j]);
+      }
+      printf("%f \n", c[i]);
+    }
+    
     return 0;
  }

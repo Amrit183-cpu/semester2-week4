@@ -4,6 +4,7 @@
  */
 
  #include <stdio.h>
+ #include <stdlib.h>
 
  int main( void ) {
     int n = 5;
@@ -13,6 +14,13 @@
     a = calloc( n, sizeof(float) );
     b = calloc( n, sizeof(float) );
     d = calloc( n, sizeof(float) );
+    
+    for (int i=0; i<n; i++){
+      a[i] = 1; 
+      b[i] = i+2;
+      d[0]= d[0] + (a[i] * b[i]);
+    }
+    printf("%f \n", d[0]);
 
     /*
     Code to initialise the vectors with numerical data 

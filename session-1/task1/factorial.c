@@ -6,19 +6,15 @@
  #include <stdio.h>
 
  int main( void ) {
-    int f[20];
-    for ( int k=0; k<20; ++k) { 
-      f[0] = 1;
-      //how to implement the factorial?
-      for (int j=0; j<k; ++j) {
-        f[k] = f[k] * f[j];
+    long long num_array[20]; //created array of length 20
+    for (int i=0; i<20; ++i){
+      num_array[i] = i+1;
+      int result = 1; 
+      for (int j=1; j<=i; ++j){
+        result = result * j;
+        num_array[i] = result;
       }
-      printf("%d ", f[k]);
+      printf("%lld \n",num_array[i]); //print long long 
     }
-
-    /*
-    Code to compute the factorial of each array index
-    Print your final answer
-    */
     return 0;
  }

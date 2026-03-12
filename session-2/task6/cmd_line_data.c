@@ -15,9 +15,15 @@
 
 int main( int argc, char **argv ) {
     
-    /*
-    Your code
-    */
+    printf("Number of args: %d\n", argc);
+
+    int num = atoi(argv[1]); //turns string into a num
+    char *str = argv[2];
+    double dec = atof(argv[3]); //turns the num in string into a float
+
+    for (int k=0; k<argc; k++){
+        printf("argv[%d]: %s\n",k, argv[k]);
+    }
 
     return 0;
 }

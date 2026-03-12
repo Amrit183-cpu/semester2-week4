@@ -11,3 +11,6 @@ int main( void ) {
 
     return 0;
 }
+//user puts data into cmnd terminal 
+//the program reads amount of integers given 
+//stops counting after first failure
